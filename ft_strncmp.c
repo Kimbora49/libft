@@ -12,6 +12,7 @@
 
 // #include <string.h>
 // #include <stdio.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -22,7 +23,7 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     {
         if (s1[i] - s2[i] != 0)
             return (s1[i] - s2[i]);
-        i++;w
+        i++;
     }
     return (s1[i] - s2[i]);
 }

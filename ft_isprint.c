@@ -12,6 +12,7 @@
 
 // #include <ctype.h> //DELETE
 // #include <stdio.h> //DELETE
+#include "libft.h"
 
 int ft_isprint(int c)
 {

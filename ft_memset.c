@@ -12,6 +12,7 @@
 
 // #include <string.h>
 // #include <stdio.h>
+#include "libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
 {
@@ -20,8 +21,6 @@ void *ft_memset(void *s, int c, size_t n)
 
     chars = s;
     i = 0;
-    if (s == NULL)
-        return (NULL);
     while (i < n)
     {
         *chars = (char)c;

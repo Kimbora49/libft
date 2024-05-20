@@ -12,6 +12,7 @@
 
 // #include <string.h> //DELETE
 // #include <stdio.h> //DELETE
+#include "libft.h"
 
 size_t ft_strlen(const char *s)
 {

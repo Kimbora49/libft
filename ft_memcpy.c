@@ -12,6 +12,7 @@
 
 // #include <string.h>
 // #include <stdio.h>
+#include "libft.h"
 
 void *ft_memcpy(void *dest, const void *src, size_t n)
 {
@@ -24,7 +25,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     i = 0;
     if (src == NULL)
         return (NULL);
-    while (i < n && charsrc[i] && chardest[i])
+    while (i < n)
     {
         *chardest = *charsrc;
         chardest++;
@@ -32,7 +33,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
         i++;
     }
 
-    return (dest);
+    return (dest + i);
 }
 
 // int main(void)

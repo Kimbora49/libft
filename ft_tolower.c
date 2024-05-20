@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 // #include <stdio.h> //DELETE
+#include "libft.h"
 
 int ft_toupper(int c)
 {

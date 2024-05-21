@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aft_calloc.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:21:41 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/20 19:23:35 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/21 13:01:08 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static size_t	ft_securite(size_t count, size_t size)
+static size_t	ft_safemultiply(size_t count, size_t size)
 {
 	size_t	size_max;
 
@@ -30,9 +30,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*tab;
 
-	tab = malloc(ft_securite(count, size));
+	tab = malloc(ft_safemultiply(count, size));
 	if (!tab)
 		return (NULL);
-	ft_memset(tab, 0, ft_securite(count, size));
+	ft_bzero(tab, ft_safemultiply(count, size));
 	return (tab);
 }

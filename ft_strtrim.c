@@ -6,12 +6,12 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:26:48 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/21 17:55:42 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/23 13:20:41 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
 // size_t ft_strlen(const char *s)
@@ -63,15 +63,15 @@
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-    int 	i;
-    int 	end;
+	int 	i;
+	int 	end;
 	char	*news;
 
-    i = 0;
-    end = ft_strlen(s1);
-    while (ft_strchr(set, (int)s1[end]) && end >= 0)
+	i = 0;
+	end = ft_strlen(s1);
+	while (ft_strchr(set, (int)s1[end]) && end >= 0)
 	{
-        end--;
+		end--;
 	}
 	while (ft_strchr(set, (int)s1[i]) && i < end)
 	{

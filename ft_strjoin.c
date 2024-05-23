@@ -6,22 +6,22 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 15:18:55 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/21 17:18:49 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/23 11:50:51 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+// #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
-{
-    int i;
+// size_t ft_strlen(const char *s)
+// {
+//     int i;
 
-    i = 0;
-    while (s[i++]);
-    return (i - 1);00000
-}
+//     i = 0;
+//     while (s[i++]);
+//     return (i - 1);
+// }
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -36,6 +36,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	lentot = lens1 + lens2;
 	
 	news = (char *)malloc((lentot + 1) * sizeof(char));
+	if (!news)
+		return NULL;
 	i = 0;
 	while(i < lens1)
 	{
@@ -52,9 +54,7 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return(news);
 }
 
-int	main(void)
-{
-	printf("%s", ft_strjoin("Salut", " a tous !"));
-}
-
-"   salut a tous   "
+// int	main(void)
+// {
+// 	printf("%s", ft_strjoin("Salut", " a tous !"));
+// }

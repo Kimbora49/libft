@@ -6,27 +6,13 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 17:41:38 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/24 17:51:45 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/26 11:20:48 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-t_list *ft_lstnew(void *lettre)
-{
-    t_list *lstnew;
-        
-    lstnew = (t_list *)malloc(sizeof(t_list));
-    if (lstnew == NULL)
-    {
-        return NULL;
-    }
-    lstnew->content = lettre;
-    lstnew->next = NULL;
-    return  (lstnew); 
-}
 
 int ft_lstsize(t_list *lst)
 {

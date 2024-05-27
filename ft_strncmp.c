@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
 #include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -27,13 +25,3 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
     }
     return (s1[i] - s2[i]);
 }
-
-// int main(void)
-// {
-//     char    str1[] = "Salut a tous !";
-//     char    str2[] = "salut a tous !";
-//     int     n = 5;
-
-//     printf("strncmp    : %d\n", strncmp(str1, str2, n));
-//     printf("ft_strncmp : %d\n", ft_strncmp(str1, str2, n));
-// }

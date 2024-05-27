@@ -6,12 +6,18 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 15:52:11 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:30:47 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:43:37 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
+#include <limits.h>
 
 
 // PROTOTYPES
@@ -50,6 +56,13 @@ char    *ft_substr(char const *s, unsigned int start, size_t len);
 int     ft_toupper(int c);
 int     ft_toupper(int c);
 
+// LIST FOR BONUSES
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
 // PROTOTYPES BONUSES
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void    ft_lstadd_back(t_list **lst, t_list *new);
@@ -61,11 +74,5 @@ t_list  *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list  *ft_lstnew(void *content);
 int     ft_lstsize(t_list *lst);
 
-// LIST FOR BONUSES
-typedef struct s_list
-{
-void *content;
-struct s_list *next;
-} t_list;
 
 #endif

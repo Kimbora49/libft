@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h> //DELETE
-// #include <stdio.h> //DELETE
 #include "libft.h"
 
 int ft_isalpha(int c)
@@ -20,16 +18,3 @@ int ft_isalpha(int c)
         return (1024);
     return (0);
 }
-
-//DELETE
-// int main(void)
-// {
-//     int a = -5;
-
-//     while (a++ <= 128)
-//     {
-//         printf("%d : %c : ", a, a);
-//         printf("%d:", isalpha(a));
-//         printf("%d\n", ft_isalpha(a));
-//     }
-// }

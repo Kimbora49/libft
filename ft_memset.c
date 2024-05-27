@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
 #include "libft.h"
 
 void *ft_memset(void *s, int c, size_t n)
@@ -29,18 +27,3 @@ void *ft_memset(void *s, int c, size_t n)
     }
     return (s);
 }
-
-// int main(void)
-// {
-//     char s[] = "NULL";
-//     int c = 'A';
-//     size_t  n = 5;
-
-//     printf("memset    : %p\n", memset(s, c, n));
-//     printf("%s\n", s);
-
-//     char s2[] = "NULL";
-    
-//     printf("ft_memset : %p\n", ft_memset(s2, c, n));
-//     printf("%s\n", s2);
-// }

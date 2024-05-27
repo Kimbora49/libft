@@ -6,11 +6,10 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:58:16 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:15:10 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:46:46 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -31,12 +30,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     const char  *s = "Salut a tous les amis";
-//     int         c = 't';
-//     size_t      n = 25;
-
-//     printf("%s", (char *)ft_memchr(s, c, n));
-// }

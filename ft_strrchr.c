@@ -6,21 +6,11 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:30:06 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/20 17:51:04 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:51:18 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
 #include "libft.h"
-
-// size_t ft_strlen(const char *s)
-// {
-//     int i;
-
-//     i = 0;
-//     while (s[i++]);
-//     return (i - 1);
-// }
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -39,11 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-//     int c = 's';
-//     const char *s = "salut a tous les amis";
-
-//     printf("%s", ft_strrchr(s, c));
-// }

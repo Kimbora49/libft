@@ -6,30 +6,11 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 14:58:27 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:17:57 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:50:54 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<stdlib.h>
-
-// size_t ft_strlen(const char *s)
-// {
-//     int i;
-
-//     i = 0;
-//     while (s[i++]);
-//     return (i - 1);
-// }
-
-// char ft_turnz(unsigned int i, char c)
-// {
-//     (void) i;
-
-//     if (c != 'a')
-//         c = 'z';
-//     return (c);
-// }
+#include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -47,8 +28,3 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     }
     return (news);
 }
-
-// int main(void)
-// {
-//     printf("%s", ft_strmapi("salut a tous !", ft_turnz));
-// }

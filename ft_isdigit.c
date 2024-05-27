@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <ctype.h> //DELETE
-// #include <stdio.h> //DELETE
+#include "libft.h"
 
 int ft_isdigit(int c)
 {
@@ -19,16 +18,3 @@ int ft_isdigit(int c)
         return (2048);
     return (0);
 }
-
-//DELETE
-// int main(void)
-// {
-//     int a = -5;
-
-//     while (a++ <= 128)
-//     {
-//         printf("%d : %c : ", a, a);
-//         printf("%d:", isascii(a));
-//         printf("%d\n", ft_isascii(a));
-//     }
-// }

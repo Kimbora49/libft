@@ -6,21 +6,11 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 15:34:43 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:17:16 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:50:18 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-size_t ft_strlen(const char *s)
-{
-    int i;
-
-    i = 0;
-    while (s[i++]);
-    return (i - 1);
-}
 
 size_t  ft_strlcat(char * dst, const char * src, size_t siz)
 {
@@ -43,14 +33,4 @@ size_t  ft_strlcat(char * dst, const char * src, size_t siz)
 	}
 	dst[c] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[d]));
-}
-
-int main(void)
-{
-    const char src[] = "salut";
-    char dst[] = "hfs";
-	size_t	siz = 7;
-
-    printf("%zu\n", ft_strlcat(dst, src, siz));
-	printf("%s", dst);
 }

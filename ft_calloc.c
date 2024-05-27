@@ -6,12 +6,10 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:21:41 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:13:58 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:43:54 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	ft_safemultiply(size_t count, size_t size)

@@ -6,13 +6,10 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 14:55:03 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:16:51 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:49:35 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char *ft_strdup(const char *s)
@@ -31,11 +28,3 @@ char *ft_strdup(const char *s)
     }
     return (dest);
 }
-
-// int main(void)
-// {
-//     const char *s = "Salutations";
-
-//     printf("%s\n", ft_strdup(s));
-//     printf("%s", strdup(s));
-// }

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <strings.h>
-// #include <stdio.h>
 #include "libft.h"
 
 void ft_bzero(void *s, size_t n)
@@ -31,30 +29,3 @@ void ft_bzero(void *s, size_t n)
     }
     return ;
 }
-
-// int main(void)
-// {
-//     char s[] = "salut a tous";
-//     size_t  n = 5;
-//     size_t i = 0;
-
-//     printf("\nbzero : \n");
-//     bzero(s, n);
-//     printf("%s\n", s);
-//     while (i < 12)
-//     {
-//         printf("%c : ", s[i]);
-//         i++;
-//     }
-//     printf("\nft_bzero : \n");
-//     char s2[] = "salut a tous";
-//     ft_bzero(s2, n);
-//     printf("%s\n", s2);
-
-//     i = 0;
-//     while (i < 12)
-//     {
-//         printf("%c : ", s[i]);
-//         i++;
-//     }
-// }

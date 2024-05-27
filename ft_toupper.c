@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h> //DELETE
 #include "libft.h"
 
 int ft_toupper(int c)
@@ -19,15 +18,3 @@ int ft_toupper(int c)
         return (c - 32);
     return (0);
 }
-
-//DELETE
-// int main(void)
-// {
-//     int a = -5;
-
-//     while (a++ <= 128)
-//     {
-//         printf("%c : ", a);
-//         printf("%c\n", ft_toupper(a));
-//     }
-// }

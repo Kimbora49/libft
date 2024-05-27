@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aft_memcmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:19:52 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/20 19:20:52 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:46:54 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include<string.h>
-// #include<stdio.h>
 #include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -31,17 +29,3 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
     }
     return (str1[i] - str2[i]);
 }
-
-// int main()
-// {
-//     char *s1;
-//     char *s2;
-    
-//     s1 = "Bonjour";
-//     s2 = "BonjourN";
-//     printf("Ma fonction :\n");
-//     printf("%d\n", ft_memcmp(s1, s2, 15));
-//     printf("Fonction de base :\n");
-//     printf("%d", memcmp(s1, s2, 15));
-//     return (0);
-// }

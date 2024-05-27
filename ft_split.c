@@ -6,42 +6,11 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 13:18:30 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:16:33 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:48:22 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
-
-size_t ft_strlen(const char *s)
-{
-    int i;
-
-    i = 0;
-    while (s[i++]);
-    return (i - 1);
-}
-
-char    *ft_substr(char const *s, unsigned int start, size_t len)
-{
-    unsigned int	i;
-    char			*news;
-
-	if(!s)
-		return NULL;
-    news = (char *)malloc((len + 1) * sizeof(char));
-    if (!news)
-	    return NULL;
-	i = 0;
-	while (s[start + i] != '\0' && i < len)
-	{
-		news[i] = s[start + i];
-		i++;
-	}
-	news[i] = '\0';
-	return (news);
-}
 
 char **ft_split(char const *s, char c)
 {
@@ -83,19 +52,4 @@ char **ft_split(char const *s, char c)
 	else
 		tab[str] = NULL;
 	return(tab);
-}
-
-int	main(void)
-{
-	char **tab;
-	int	i;
-	
-	tab = ft_split("salut;;a;tous;les;amis;!", ';');
-	
-	i = 0;
-	while(tab[i])
-	{
-		printf("[%s] ", tab[i]);
-		i++;
-	}
 }

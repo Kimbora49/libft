@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h> //DELETE
-// #include <stdio.h> //DELETE
 #include "libft.h"
 
 size_t ft_strlen(const char *s)
@@ -22,13 +20,3 @@ size_t ft_strlen(const char *s)
     while (s[i++]);
     return (i - 1);
 }
-
-//DELETE
-// int main(void)
-// {
-//     char s[] = "Salut a tous !";
-
-//     printf("%s : ", s);
-//     printf("%ld : ", strlen(s));
-//     printf("%ld\n", ft_strlen(s));
-// }

@@ -6,12 +6,10 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 16:38:03 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/26 11:15:00 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/27 15:44:56 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int count_size(int  n)
@@ -62,9 +60,4 @@ char    *ft_itoa(int num)
         n = n / 10; // 180 = 18, 18 = 1 etc..
     }
     return (dest);
-}
-
-int main(void)
-{
-    printf("%s", ft_itoa(14554));
 }

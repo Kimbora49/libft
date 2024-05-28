@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 17:56:31 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/27 15:46:25 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/28 16:17:46 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list  *ft_lstlast(t_list *lst)
 {
+	if (lst == NULL)
+		return NULL;
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 13:18:30 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/28 16:05:44 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/29 17:58:44 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countword(char *str, char c)
+static int	ft_countword(char const *str, char c)
 {
 	int	i;
 	int	count;
@@ -21,19 +21,21 @@ static int	ft_countword(char *str, char c)
 	count = 0;
 	while (str[i])
 	{
-		while (str[i] == c && str[i])
-			i++;
-		if (str[i])
+		if(str[i] != c)
+		{
 			count++;
-		while (str[i] != c && str[i])
+			while (str[i] && str[i] != c)
+				i++;
+		}
+		else if (str[i] == c)
 			i++;
 	}
 	return (count);
 }
 
-static int	ft_lenword(char *str, char c)
+static int	ft_lenword(char const *str, char c)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] && str[i] != c)
@@ -41,62 +43,53 @@ static int	ft_lenword(char *str, char c)
 	return (i);
 }
 
-static char	**ft_mallocerror(char **dest)
+static void	freeing(size_t i, char **dest)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (dest[i])
+	while (i > 0)
 	{
-		free (dest[i]);
-		i++;
+		i--;
+		free(dest[i]);
 	}
 	free(dest);
-	return (NULL);
+
 }
 
-void	ft_addword(char **dest, char *str, int i, char c)
+static char	**ft_addword(char **dest, char const *str, size_t nbwords, char c)
 {
-	int	j;
-	int	k;
-
-	j = 0;
-	while (str[i])
-	{
-		k = 0;
-		while (str[i] == c)
-			i++;
-		if (str[i])
-		{
-			dest[j] = malloc((sizeof(char)) * (ft_lenword(str + i, c) + 1));
-			if (!dest[j])
-				ft_mallocerror(dest);
-			while (str[i] && str[i] != c)
-			{
-				dest[j][k] = str[i];
-				i++;
-				k++;
-			}
-			dest[j][k] = '\0';
-			j++;
-		}
-	}
-	dest[j] = (NULL);
-}
-
-char	**ft_split(char const *s, char c)                                   
-{
-	char	*str;
-	char	**dest;
-	int		i;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
+	j = 0;
+	while (i < nbwords)
+	{
+		while (str[j] && str[j] == c)
+			j++;
+		dest[i] = ft_substr(str, j, ft_lenword(&str[j], c));
+		if (!dest[i])
+		{
+			freeing(i, dest);
+			return (NULL);
+		}
+		while (str[j] && str[j] != c)
+			j++;
+		i++;
+	}
+	dest[i] = NULL;
+	return (dest);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**dest;
+	size_t	nbwords;
+
 	if (!s)
 		return (NULL);
-	str = (char *)s;
-	dest = malloc(sizeof(char *) * (ft_countword(str, c) + 1));
+	nbwords = ft_countword(s, c);
+	dest = malloc(sizeof(char *) * (nbwords + 1));
 	if (!dest)
 		return (NULL);
-	ft_addword(dest, str, i, c);
+	dest = ft_addword(dest, s, nbwords, c);
 	return (dest);
 }

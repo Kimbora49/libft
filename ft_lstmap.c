@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 12:19:10 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/28 16:13:41 by marvin           ###   ########.fr       */
+/*   Updated: 2024/05/29 17:27:12 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*newlst;
 
 	newlst = NULL;
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (NULL);
 	while (lst != NULL)
 	{

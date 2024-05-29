@@ -6,16 +6,16 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 17:26:48 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/27 15:51:28 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/29 13:39:01 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int 	i;
-	int 	end;
+	int		i;
+	int		end;
 	char	*news;
 
 	i = 0;

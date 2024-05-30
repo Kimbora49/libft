@@ -6,7 +6,7 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 19:21:41 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/29 17:20:20 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/30 16:32:40 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static size_t	ft_safemultiply(size_t count, size_t size)
 	if (count == 0 || size == 0)
 		return (0);
 	if (count > size_max / size || size > size_max / count)
-		return (LONG_MAX);
+		return (0);
 	return (count * size);
 }
 

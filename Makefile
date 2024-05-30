@@ -6,7 +6,7 @@
 #    By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/27 17:57:24 by tmazan            #+#    #+#              #
-#    Updated: 2024/05/30 13:30:54 by tmazan           ###   ########.fr        #
+#    Updated: 2024/05/30 16:33:24 by tmazan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,3 +52,5 @@ re:				fclean all
 
 bonus:			$(OBJS) $(BONUS_OBJS)
 				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:            all clean fclean re bonus

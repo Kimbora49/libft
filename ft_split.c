@@ -6,7 +6,7 @@
 /*   By: tmazan <tmazan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/23 13:18:30 by tmazan            #+#    #+#             */
-/*   Updated: 2024/05/29 17:58:44 by tmazan           ###   ########.fr       */
+/*   Updated: 2024/05/30 11:13:02 by tmazan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	ft_countword(char const *str, char c)
 	count = 0;
 	while (str[i])
 	{
-		if(str[i] != c)
+		if (str[i] != c)
 		{
 			count++;
 			while (str[i] && str[i] != c)
@@ -51,7 +51,6 @@ static void	freeing(size_t i, char **dest)
 		free(dest[i]);
 	}
 	free(dest);
-
 }
 
 static char	**ft_addword(char **dest, char const *str, size_t nbwords, char c)
